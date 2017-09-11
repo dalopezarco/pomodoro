@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Courgette', cursive;
+  background-color: rgb(255, 255, 255);
+  background-image: url("https://www.comenaranjas.com/images/stories/virtuemart/product/lechuga.jpg");
+  background-repeat:no-repeat;
+  background-position: bottom;
+}
+
+h1{
+  font-size: 35px;
+  color: #dc3545;
+}
+small{
+  color: black;
+}
+
+.elemento{
+  margin:5px;
+}
+
+.main-container{
+  margin-top: 20px;
+}
+
+.completo{
+
+  color:#f00;
+   font-size:50px;
+   margin:10px auto;
+   border : 5px solid #dc3545;
+   border-radius:50%;
+   width:160px;
+   height:160px;
+   overflow:hidden;
+   position:relative;
+}
+
+.rellenar{
+  background-image: url("http://www.lavanguardia.com/r/GODO/LV/p3/WebSite/2016/10/17/Recortada/img_ysaiz_20160908-162606_imagenes_lv_getty_istock_22114092_small-kDdB--656x437@LaVanguardia-Web.jpg");
+  background-color: #cdb946;
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  bottom: 0;
+}
+
+.descanso{
+  background-image: url("https://cdn.dribbble.com/users/22343/screenshots/1446126/10_cupofcoffee_1x.png");
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+.container{
+  margin-top: 20px;
+}
+
+
+
+/*Animaciones*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

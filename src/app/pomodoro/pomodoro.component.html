@@ -1,0 +1,101 @@
+<div class="container-fluid">
+<div class="text-center main-container">
+  <h1> <small>Hagamos unos</small> Pomodoros!</h1>
+
+  <div class="animated fadeIn" *ngIf="segundosBool && !first">
+    <h1>{{segundos | segundos}}</h1>
+  </div>
+
+  <div class="animated fadeIn" *ngIf="descansoBool && !first">
+    <h1>{{descanso | segundos}}</h1>
+  </div>
+
+<div class="completo">
+
+    <div class="rellenar "
+    [ngStyle]="{height: alturaCont + 'px'}">
+    </div>
+
+    <div *ngIf="descansoBool"class="descanso">
+
+    </div>
+
+</div>
+
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h4> Periodo de la sesión: </h4>
+  </div>
+  <div class="row justify-content-center">
+    <div class="elemento">
+      <button [disabled]="flagComienzo" (click)="aumentar()" type="button" name="button" class="btn btn-sm btn-danger">+</button>
+      </div>
+
+      <div class="elemento">
+        <h4 *ngIf="!segundosPredefinido">{{segundos | segundos}}</h4>
+        <h4 *ngIf="segundosPredefinido">{{segundosPredefinido | segundos}}</h4>
+
+        </div>
+
+      <div class="elemento">
+          <button [disabled]="flagComienzo"
+          (click)="disminuir()" type="button" name="button" class="btn btn-danger btn-sm">-</button>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h4> Periodo del descanso corto: </h4>
+  </div>
+  <div class="row justify-content-center">
+    <div class="elemento">
+      <button [disabled]="flagComienzo" (click)="aumentarDescanso()" type="button" name="button" class="btn btn-sm btn-danger">+</button>
+      </div>
+
+      <div class="elemento">
+        <h4 *ngIf="!descansoPredefinido">{{descanso | segundos}}</h4>
+        <h4 *ngIf="descansoPredefinido">{{descansoPredefinido | segundos}}</h4>
+
+        </div>
+
+      <div class="elemento">
+          <button [disabled]="flagComienzo" (click)="disminuirDescanso()" type="button" name="button" class="btn btn-danger btn-sm">-</button>
+      </div>
+  </div>
+</div>
+
+
+
+  <br>
+
+ <button (click)="subscribeTimer0()" *ngIf="timer0Id"
+
+  type="button" name="button" class="btn btn-danger">Pausar</button>
+
+  <button (click)="subscribeTimer0()" *ngIf="(!timer0Id && !first)"
+
+   type="button" name="button" class="btn btn-danger">Reanudar</button>
+
+   <button (click)="subscribeTimer0()" *ngIf="(!timer0Id && first)"
+
+    type="button" name="button" class="btn btn-danger">Comenzar!</button>
+
+  <button (click)="stop()"
+
+   type="button" name="button" class="btn btn-danger">Stop</button>
+
+  </div>
+
+</div>
+<br>
+
+<footer id="footer" class="text-center">
+  <div class="container">
+    Designed & Coded by
+    <a href="https://www.freecodecamp.org/danyjaen" target="_blank">
+        Daniel Lopez</a>
+  </div>
+</footer>
